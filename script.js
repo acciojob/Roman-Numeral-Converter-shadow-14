@@ -15,7 +15,7 @@ function convertToRoman(num) {
         let hrns = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"];
         let ths=["","M","MM","MMM"];
         
-        return ths[num/1000] + hrns[(num%1000)/100] + tens[(num%100)/10] + ones[num%10];
+        return ths[Math.floor(num/1000)] + hrns[Math.floor((num%1000)/100)] + tens[Math.floor((num%100)/10)] + ones[Math.floor(num%10)];
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
